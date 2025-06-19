@@ -1,0 +1,139 @@
+$alert: rgb(255, 165, 0);
+$prohibited: rgb(255, 0, 0);
+$approved: rgb(138, 238, 98);
+$info: rgb(25, 25, 25);
+$notification: rgb(48, 48, 234);
+
+.alert {
+  position: relative;
+}
+
+.input {
+  padding: 0 35px;
+
+  &__alert {
+    border: 3px solid $alert;
+    color: $alert;
+    background-color: rgb(252, 223, 170);
+
+    &:focus {
+      border: 3px solid $alert;
+      outline: none;
+    }
+
+    &:active {
+      color: $alert;
+    }
+  }
+
+  &__prohibited {
+    border: 3px solid $prohibited;
+    color: $prohibited;
+    background-color: rgb(255, 181, 181);
+
+    &:focus {
+      border: 3px solid $prohibited;
+      outline: none;
+    }
+
+    &:active {
+      color: $prohibited;
+    }
+  }
+
+  &__approved {
+    border: 3px solid $approved;
+    color: $approved;
+    background-color: rgb(202, 250, 205);
+
+    &:focus {
+      border: 3px solid $approved;
+      outline: none;
+    }
+
+    &:active {
+      color: $approved;
+    }
+  }
+
+  &__info {
+    border: 3px solid rgb(105, 105, 105);
+    color: $info;
+    background-color: rgb(214, 214, 214);
+
+    &:focus {
+      border: 3px solid $info;
+      outline: none;
+    }
+
+    &:active {
+      color: $info;
+    }
+  }
+
+  &__notification {
+    border: 3px solid $notification;
+    color: $notification;
+    background-color: rgb(174, 205, 233);
+
+    &:focus {
+      border: 3px solid $notification;
+      outline: none;
+    }
+
+    &:active {
+      color: $notification;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%) translateY(-5px);
+
+  &__prohibited {
+    stroke: $prohibited;
+  }
+
+  &__approved {
+    stroke: $approved;
+  }
+
+  &__info {
+    stroke: $info;
+  }
+
+  &__notification {
+    stroke: $notification;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%) translateY(-5px);
+  cursor: pointer;
+
+  &__alert {
+    stroke: $alert;
+  }
+
+  &__prohibited {
+    stroke: $prohibited;
+  }
+
+  &__approved {
+    stroke: $approved;
+  }
+
+  &__info {
+    stroke: $info;
+  }
+
+  &__notification {
+    stroke: $notification;
+  }
+}

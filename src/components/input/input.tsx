@@ -9,6 +9,10 @@ export interface InputInterface {
   disabled?: boolean;
   alert?: boolean;
   errorMessage?: string;
+  classNames?: {
+    base?: string;
+    input?: string;
+  };
 }
 
 export function Input({
@@ -17,9 +21,10 @@ export function Input({
   disabled = false,
   alert = false,
   errorMessage = '',
+  classNames,
 }: InputInterface) {
   return (
-    <div className={styles.inputWrapper}>
+    <div className={clsx(styles.inputWrapper, classNames?.base)}>
       <input
         type="text"
         value={value}
@@ -28,7 +33,8 @@ export function Input({
         className={clsx(
           styles.input,
           disabled && styles.input__disabled,
-          alert && styles.input__alert
+          alert && styles.input__alert,
+          classNames?.input
         )}
         placeholder={PLACEHOLDER}
       />
